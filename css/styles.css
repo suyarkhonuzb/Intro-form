@@ -1,6 +1,7 @@
 :root{
     --color-primary: #f03535;
     --body-bg: #f1f4ff;
+    --title-color:#000;
     --text-color: #fff;
 }
 
@@ -29,28 +30,30 @@ body{
 .main-content{
     flex-grow: 1;
     background-color: var(--body-bg);
+    padding: 80px;
 }
 
 /* HERO STYLES */
 .intro-page{
     display: flex;
-    padding: 80px 144px;
 }
 
 .hero {
     width: 100%;
     max-width: 570px;
-    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
     color: var(--text-color);
 }
 
 .hero-main{
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
+    flex-grow: 1;
     align-items: flex-start;
     padding: 55px 60px;
+    overflow: hidden;
     background-color: #222;
     background-image: url(../images/Rectangle\ 6.jpg);
     background-repeat: no-repeat;
@@ -91,25 +94,85 @@ body{
     line-height: normal;
     font-weight: 700;
     font-style: normal;
+    border-radius: 0 0 20px 20px;
     background-color: #4dc490;
 }
-.form-container {
+
+
+/* SIGNUP-FORM */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 570px;
+    border-radius: 20px;
+    margin-left: 12px;
+    padding: 55px 60px 40px;
+    background-color: #fff;
+} 
+
+.signup-heading {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 65px;
+    color: #000;
 }
-.form-section {
+
+.signup-fields {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 63px;
 }
-.form-section-title {
+
+.signup-form-field {
+    border: 0;
+    border-bottom: 1px solid #555;
+    padding-top: 15px;
+    padding-bottom: 14px;
 }
-.form {
+
+.signup-form-field:focus{
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 600;
+    color: #000;
 }
-.form-groups {
+
+.signup-form-field:not(:last-child){
+    margin-bottom: 20px;
 }
-.form-group {
+
+.signup-form-submit {
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    background-color: #655AF2;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.form-group-field {
+
+.signup-form-submit:hover{
+    background-color: #3a2bf8;
 }
-.button {
+
+.signup-form-notice {
+    margin-top: 0;
+    font-size: 11px;
+    line-height: 15px ;
+    font-weight: 400;
+    text-align: center;
+    color: #555;
 }
-.form-bottom-text {
-}
-.from-bottom-link {
+
+.signup-form-notice-link {
+    color: var(--color-primary);
+    font-weight: 500;
 }
